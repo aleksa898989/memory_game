@@ -1,13 +1,10 @@
-import CardView from "./card";
+import Card from "./card";
 import GameStatusView from "./status";
 
 const Game = (props) => {
   return (
-    <div className="game">
-      <header className="game-header">
-        <div className="game-title">A Memory game in React with Redux</div>
-      </header>
-      <div className="game-status">
+    <div className="game-wrapper">
+      <div>
         <GameStatusView
           isGameFinished={props.isGameFinished}
           numberOfMoves={props.numberOfMoves}
@@ -15,9 +12,9 @@ const Game = (props) => {
           onShowNumCardsSelection={props.onShowNumCardsSelection}
         />
       </div>
-      <div className="card-container">
+      <div className="card-wrapper">
         {props.cards.map((card) => (
-          <CardView
+          <Card
             key={card.id}
             id={card.id}
             image={card.image}

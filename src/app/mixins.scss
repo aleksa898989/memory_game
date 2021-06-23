@@ -1,0 +1,10 @@
+@mixin fontSize($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin media($max-width) {
+  @media screen and(max-width: $max-width) {
+    @content;
+  }
+}

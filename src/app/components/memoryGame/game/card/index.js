@@ -1,4 +1,4 @@
-const CardView = (props) => {
+const Card = (props) => {
   const imageSource = `${window.location.origin}/images/${props.image}.jpg`;
   const backPath = `${window.location.origin}/images/back_of_the_card.jpg`;
 
@@ -29,4 +29,4 @@ const CardView = (props) => {
   );
 };
 
-export default CardView;
+export default Card;

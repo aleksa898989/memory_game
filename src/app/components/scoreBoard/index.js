@@ -1,18 +1,25 @@
 import { Link } from "react-router-dom";
 
 const ScoreBoard = () => {
-  let score = JSON.parse(window.localStorage.getItem("score"));
+  let score = localStorage.getItem("scoreBoard")?.split(",");
+  let final = [];
+  score?.forEach((x, index) => {
+    final.push({
+      item: x,
+      index: index,
+    });
+  });
+
   return (
     <>
-      <div>
+      <div className="score-board-wrapper">
         <h1>Score board</h1>
-        <th>USER: </th>
-        <th>SCORE: </th>
-        <tr>
-          <td>{score.user}</td>
-          <td>{score.score}</td>
-        </tr>
-        <Link to={"/"}> Play again!</Link>
+        {final.map((item) => {
+          return <p>{item.item}</p>;
+        })}
+        <Link to={"/"}>
+          <h1>Play again</h1>
+        </Link>
       </div>
     </>
   );

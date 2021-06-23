@@ -1,13 +1,11 @@
-import GameView from "app/components/memoryGame/game";
-
-
+import Game from "app/components/memoryGame/game";
 const MemoryGame = (props) => {
-
+  
   return (
     <>
       <div>
         <h1>Memory game</h1>
-        <GameView {...props}/>
+        <Game {...props}/>
       </div>
     </>
   );

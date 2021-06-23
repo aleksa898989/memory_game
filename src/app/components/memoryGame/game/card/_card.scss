@@ -1,0 +1,52 @@
+.card-wrapper {
+  img {
+    border: 5px solid white;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .card {
+    display: inline-block;
+    border-color: transparent;
+    border-width: 10px;
+    border-style: solid;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 200px;
+  }
+  display: inline-block;
+  max-width: 100%;
+  margin: "20px auto";
+  .flip-card {
+    width: 13rem;
+    height: 13rem;
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+  }
+  .animate {
+    .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  .matched {
+    border-color: green;
+  }
+}

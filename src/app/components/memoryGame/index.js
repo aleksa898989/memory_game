@@ -6,7 +6,7 @@ import {
   validateMatchingPair,
   startGame,
   showNumCardsSelection,
-} from "../../redux/actions/actions";
+} from "app/redux/actions/actions";
 
 let timeOut = null;
 const MemoryGameReduxContainer = (props) => {
