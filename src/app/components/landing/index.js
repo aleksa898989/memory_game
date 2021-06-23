@@ -30,6 +30,10 @@ const Landing = () => {
           </select>
         </div>
         <Link
+          onClick={() => {
+            // start game with number of cards depending on screen size
+            dispatch(startGame(isMobile ? 5 : 10));
+          }}
           to={{
             pathname: `/memory-game`,
             state: {
@@ -37,14 +41,7 @@ const Landing = () => {
             },
           }}
         >
-          <h1
-            onClick={() => {
-              // start game with number of cards depending on screen size
-              dispatch(startGame(isMobile ? 5 : 10));
-            }}
-          >
-            Play!
-          </h1>
+          <h1>Play!</h1>
         </Link>
       </div>
     </>
