@@ -1,6 +1,6 @@
 import { Switch, Route } from "react-router-dom";
 import Landing from "app/components/landing";
-import MemoryGame from "app/components/memoryGame";
+import Game from "app/components/game";
 import ScoreBoard from "app/components/scoreBoard";
 
 const Pages = () => {
@@ -8,7 +8,7 @@ const Pages = () => {
     <>
       <Switch>
         <Route path="/" exact component={Landing} />
-        <Route path="/memory-game" exact component={MemoryGame} />
+        <Route path="/memory-game" exact component={Game} />
         <Route path="/score-board" exact component={ScoreBoard} />
       </Switch>
     </>

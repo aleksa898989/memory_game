@@ -10,7 +10,6 @@ import {
   validateNonMatchingPair,
   validateMatchingPair,
   generatePairs,
-  SHOW_NUM_CARDS_SELECTION,
   CHECK_MATCHED_PAIR,
 } from "app/redux/actions/actions";
 
@@ -25,15 +24,11 @@ const initialState = {
   firstId: undefined,
   secondId: undefined,
   isGameFinished: false,
-  showNumCardsSelection: false,
   cards: [],
 };
 
 function memoryGame(state = initialState, action) {
   switch (action.type) {
-    case SHOW_NUM_CARDS_SELECTION:
-      return Object.assign({}, initialState, { showNumCardsSelection: true });
-
     case GENERATE_PAIRS:
       return Object.assign({}, initialState, {
         cards: cardsReducer(initialState.cards, generatePairs(action.pairs)),
@@ -45,7 +40,6 @@ function memoryGame(state = initialState, action) {
         generatePairs(action.pairs)
       );
       return Object.assign({}, initialState, {
-        showNumCardsSelection: false,
         cards: cardsReducer(cards, mix_cards()),
       });
 

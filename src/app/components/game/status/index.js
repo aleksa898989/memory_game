@@ -1,11 +1,13 @@
+import { useSelector } from "react-redux";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 
-const GameStatusView = ({
-  isGameFinished,
-  numberOfMoves,
-  numberOfPairsFound,
-}) => {
+const Status = () => {
+  let state = useSelector((state) => state);
+  let isGameFinished = state?.isGameFinished;
+  let numberOfMoves = state?.numberOfMoves;
+  let numberOfPairsFound = state?.numberOfPairsFound;
+
   let location = useLocation();
   const setUserAndScoreToLocalStorage = () => {
     let selectedUser = location?.state?.selectedUser;
@@ -41,4 +43,4 @@ const GameStatusView = ({
   );
 };
 
-export default GameStatusView;
+export default Status;

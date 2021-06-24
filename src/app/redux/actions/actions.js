@@ -6,11 +6,6 @@ export const MARK_PAIR_AS_MATCHED = "MARK_PAIR_AS_MATCHED";
 export const TURN_PAIR_DOWN = "TURN_PAIR_DOWN";
 export const START_GAME = "START_GAME";
 export const GENERATE_PAIRS = "GENERATE_PAIRS";
-export const SHOW_NUM_CARDS_SELECTION = "SHOW_NUM_CARDS_SELECTION";
-
-export const showNumCardsSelection = () => {
-  return { type: SHOW_NUM_CARDS_SELECTION };
-};
 
 export const generatePairs = (pairs) => {
   return { type: GENERATE_PAIRS, pairs };
