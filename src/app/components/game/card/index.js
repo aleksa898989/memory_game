@@ -14,12 +14,12 @@ const Card = ({ id, image, showImage, matched }) => {
     dispatch(validateMatchingPair());
     setTimeout(() => {
       dispatch(validateNonMatchingPair());
-    }, 2000);
+    }, 2500);
   };
   let numClicksWithinTurn = useSelector((state) => state.numClicksWithinTurn);
   const imageSource = `${window.location.origin}/images/${image}.jpg`;
   const backPath = `${window.location.origin}/images/back_of_the_card.jpg`;
-
+  console.log(numClicksWithinTurn);
   let className = "card flip-card";
   if (matched) {
     className = className + " matched";
