@@ -11,17 +11,15 @@ const ScoreBoard = () => {
   });
 
   return (
-    <>
-      <div className="score-board-wrapper">
-        <h1>Score board</h1>
-        {final.map((item) => {
-          return <p>{item.item}</p>;
-        })}
-        <Link to={"/"}>
-          <h1>Play again</h1>
-        </Link>
-      </div>
-    </>
+    <div className="score-board-wrapper">
+      <h1>Score board</h1>
+      {final.map((item) => {
+        return <p>{item.item}</p>;
+      })}
+      <Link to={"/"}>
+        <h1>Play again</h1>
+      </Link>
+    </div>
   );
 };
 

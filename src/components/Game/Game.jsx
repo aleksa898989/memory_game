@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
-import Card from "./card";
-import Status from "./status";
+import Card from "./Card/Card";
+import Status from "./Status/Status";
 
 const Game = () => {
-  let cards = useSelector((state) => state?.cards);
+  const cards = useSelector((state) => state?.cards);
   return (
     <div className="game-wrapper">
       <div>

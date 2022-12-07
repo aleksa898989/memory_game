@@ -11,10 +11,9 @@ import {
   validateMatchingPair,
   generatePairs,
   CHECK_MATCHED_PAIR,
-} from "app/redux/actions/actions";
+} from "redux/actions/actions";
 
-import { cardImagesAreTheSame } from "app/utils/cardImagesAreTheSame";
-import { getCard } from "app/utils/getCard";
+import { getCard, cardImagesAreTheSame } from "helpers/helpers";
 import { cardsReducer } from "./cardsReducer";
 
 const initialState = {

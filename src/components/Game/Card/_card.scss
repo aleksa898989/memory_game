@@ -17,6 +17,7 @@
   display: inline-block;
   max-width: 100%;
   margin: "20px auto";
+
   .flip-card {
     width: 13rem;
     height: 13rem;
@@ -28,6 +29,7 @@
     transition: transform 0.7s;
     transform-style: preserve-3d;
   }
+
   .animate {
     .flip-card-inner {
       transform: rotateY(180deg);
@@ -46,6 +48,7 @@
   .flip-card-back {
     transform: rotateY(180deg);
   }
+
   .matched {
     border-color: green;
   }

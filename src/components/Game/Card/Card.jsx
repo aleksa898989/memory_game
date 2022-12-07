@@ -3,11 +3,12 @@ import {
   turnCardUp,
   validateNonMatchingPair,
   validateMatchingPair,
-} from "app/redux/actions/actions";
+} from "redux/actions/actions";
 
 const Card = ({ id, image, showImage, matched }) => {
   const dispatch = useDispatch();
   let timeOut = null;
+
   const handleClick = (id) => {
     clearInterval(timeOut);
     dispatch(turnCardUp(id));
@@ -16,7 +17,9 @@ const Card = ({ id, image, showImage, matched }) => {
       dispatch(validateNonMatchingPair());
     }, 4000);
   };
-  let numClicksWithinTurn = useSelector((state) => state.numClicksWithinTurn);
+
+  const numClicksWithinTurn = useSelector((state) => state.numClicksWithinTurn);
+
   const imageSource = `${window.location.origin}/images/${image}.jpg`;
   const backPath = `${window.location.origin}/images/back_of_the_card.jpg`;
 

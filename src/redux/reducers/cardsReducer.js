@@ -4,9 +4,9 @@ import {
   MIX_CARDS,
   MARK_PAIR_AS_MATCHED,
   TURN_PAIR_DOWN,
-} from "app/redux/actions/actions";
+} from "redux/actions/actions";
 import shuffle from "shuffle-array";
-import { createSetOfCards } from "app/utils/createSetOfNewCards";
+import { createSetOfCards } from "helpers/helpers";
 
 export function cardsReducer(state = [], action) {
   switch (action.type) {
